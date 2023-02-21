@@ -4,6 +4,27 @@ All of this is wrote with vanilla javascript
 
 - Counter
 - Chess table generator
-- Pomodoro Timer
+- Pomodoro timer
+- Todo list
 
 Thanks for visiting! https://steadfast-regret.surge.sh/
+
+## Next features
+
+- [] Responsive design
+- [] Better UI
+
+Counter:
+
+- [x] Generate random number
+- [x] Reset button
+
+Chess Table:
+
+[ ] Put a button that removes table when it appears
+
+Pomodoro
+
+[] Add prebuilt timers
+
+- [ ] Handle MM:SS format
