@@ -11,7 +11,7 @@ Thanks for visiting! yielding-engine.surge.sh
 
 ## Next features
 
-- [ ] Responsive design
+- [x] Responsive design
 - [ ] Better UI
 
 Counter:
@@ -25,5 +25,10 @@ Chess Table:
 
 Pomodoro
 
-- [ ] Add prebuilt timers
-- [ ] Handle MM:SS format
+- [x] Add prebuilt timers
+- [x] Handle MM:SS format
+
+Todo List
+
+- [ ] Handle completed tasks list
+- [ ] Implement local storage features

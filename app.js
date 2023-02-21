@@ -65,10 +65,17 @@ document
   .getElementById("makeChessTable")
   .addEventListener("click", makeChessTable);
 
-// Timer
+// Pomodoro
 function startTimer() {
   var pomodoro = document.getElementById("timer");
   var secondsLeft = Number(pomodoro.value);
+
+  if (secondsLeft <= 0) {
+    clearInterval(intervalId);
+    alert("The counter cannot start at 0 or negative numbers");
+    pomodoro.value = "";
+    return;
+  }
 
   var intervalId = setInterval(() => {
     secondsLeft--;
@@ -77,6 +84,30 @@ function startTimer() {
     if (secondsLeft === 0) {
       clearInterval(intervalId);
       var audio = new Audio("ringtone.mp3");
+      audio.play();
+    }
+  }, 1000);
+}
+
+function startDefaultTimer(time) {
+  let minutes = Number(time.split(":")[0]);
+  let seconds = Number(time.split(":")[1]);
+  const format60 = 60;
+  const btn = document.querySelector(`[id='${minutes}']`);
+  btn.textContent = time;
+
+  const intervalId = setInterval(() => {
+    const timeString = `${minutes.toString().padStart(2, "0")}
+      :${seconds.toString().padStart(2, "0")}`;
+    btn.textContent = timeString;
+    seconds--;
+    if (seconds < 0) {
+      minutes--;
+      seconds = format60 - 1;
+    }
+    if (minutes < 0) {
+      clearInterval(intervalId);
+      const audio = new Audio("ringtone.mp3");
       audio.play();
     }
   }, 1000);
