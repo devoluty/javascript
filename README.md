@@ -6,4 +6,4 @@ All of this is wrote with vanilla javascript
 - Chess table generator
 - Pomodoro Timer
 
-Thanks for reading
+Thanks for visiting! https://steadfast-regret.surge.sh/
