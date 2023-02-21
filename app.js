@@ -40,11 +40,11 @@ document
 // Timer
 function startTimer() {
   var pomodoro = document.getElementById("timer");
-  var secondsLeft = Number(pomodoro.textContent);
+  var secondsLeft = Number(pomodoro.value);
 
   var intervalId = setInterval(() => {
     secondsLeft--;
-    pomodoro.textContent = secondsLeft;
+    pomodoro.value = secondsLeft;
 
     if (secondsLeft === 0) {
       clearInterval(intervalId);
