@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "DM Mono";
+}
+
+button {
+  padding: 0.4rem;
+  border-radius: 10px;
+  font-size: medium;
+  background-color: white;
+  cursor: pointer;
+  margin: 0.2rem;
+}
+
+button:hover {
+  background-color: whitesmoke;
+}
+
+body {
+  margin: 2rem;
+}
+
+.project {
+  margin-top: 3rem;
+}
+
+div {
+  --square: 20px;
+}
+
+#table {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(8, var(--square));
+  grid-template-rows: repeat(8, var(--square));
+  gap: 0;
+}
+
+.black {
+  background-color: black;
+  width: var(--square);
+  height: var(--square);
+}
+
+.white {
+  background-color: crimson;
+  width: var(--square);
+  height: var(--square);
+}
