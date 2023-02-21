@@ -7,7 +7,7 @@ All of this is wrote with vanilla javascript
 - Pomodoro timer
 - Todo list
 
-Thanks for visiting! https://steadfast-regret.surge.sh/
+Thanks for visiting! yielding-engine.surge.sh
 
 ## Next features
 
