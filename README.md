@@ -11,8 +11,8 @@ Thanks for visiting! https://steadfast-regret.surge.sh/
 
 ## Next features
 
-- [] Responsive design
-- [] Better UI
+- [ ] Responsive design
+- [ ] Better UI
 
 Counter:
 
@@ -21,10 +21,9 @@ Counter:
 
 Chess Table:
 
-[ ] Put a button that removes table when it appears
+- [x] Put a button that removes table when it appears
 
 Pomodoro
 
-[] Add prebuilt timers
-
+- [ ] Add prebuilt timers
 - [ ] Handle MM:SS format
