@@ -6,153 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects in Javascript</title>
     <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://kit.fontawesome.com/1c98671c6b.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css" />
   </head>
   <body>
-    <nav class="noto-serif large m-2 flex space-between">
-      <h1 class="weight-500">
-        <i class="fa-solid fa-dragon m-r-2"></i>PROJECTS AND MINIPROJECTS
-        <span class="gray zeyada large m-l-1">by devoluty</span>
-      </h1>
-      <div class="larger">
-        <i class="fa-regular fa-lightbulb"></i>
-        <i class="fa-solid fa-lightbulb"></i>
-        <a href="https://github.com/devoluty/javascript"
-          ><i class="fa-brands fa-github black"></i
-        ></a>
+    <div>
+      <h1>Miniprojects</h1>
+      <p class="author">
+        Devolutyy <br />
+        February 22, 2023
+      </p>
+    </div>
+    <div>
+      <div>
+        <h2>This is a counter</h2>
+        <p id="counter">1</p>
+        <div>
+          <button id="add">+</button>
+          <button id="rest">-</button>
+          <button id="reset">0</button>
+          <button id="random">Random</button>
+        </div>
       </div>
-    </nav>
-    <div class="grid grid-thirth noto-serif m-2">
-      <div class="m-b-1">
-        <h1 class="large weight-500 m-b-1">This is a counter</h1>
-        <p class="pt-mono" id="counter">1</p>
-        <button
-          class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-          id="add"
-        >
-          +
-        </button>
-        <button
-          class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-          id="rest"
-        >
-          -
-        </button>
-        <button
-          class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-          id="reset"
-        >
-          0
-        </button>
-        <button
-          class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-          id="random"
-        >
-          Random
-        </button>
-      </div>
-      <div class="m-b-1" id="chess-project">
-        <h1 class="large weight-500 m-b-1">This is is a chess table</h1>
-        <button
-          class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-          id="makeChessTable"
-        >
-          Generate
-        </button>
+      <div id="chess-project">
+        <h2>This is is a chess table</h2>
+        <button id="makeChessTable">Generate</button>
         <div id="table"></div>
       </div>
-      <div class="m-b-1">
-        <h1 class="large weight-500 m-b-1">This is a pomodoro timer</h1>
-        <input
-          class="bg-whitesmoke p-05 m-05 text-medium border-none outline-none rounded-md m-b-1"
-          type="text"
-          placeholder="time in seconds"
-          id="timer"
-          value="0"
-        />
-        <button
-          class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-          id="start-timer"
-        >
-          Start
-        </button>
-        <div class="mono">
-          <button
-            class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-            id="0"
-            onclick="startDefaultTimer('00:10')"
-          >
-            00:10
-          </button>
-          <button
-            class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-            id="1"
-            onclick="startDefaultTimer('01:00')"
-          >
-            01:00
-          </button>
-          <button
-            class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-            id="5"
-            onclick="startDefaultTimer('05:00')"
-          >
-            05:00
-          </button>
-          <button
-            class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-            id="15"
-            onclick="startDefaultTimer('15:00')"
-          >
-            15:00
-          </button>
-          <button
-            class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-            id="25"
-            onclick="startDefaultTimer('25:00')"
-          >
-            25:00
-          </button>
+      <div>
+        <h2>This is a pomodoro timer</h2>
+        <input type="text" placeholder="time in seconds" id="timer" value="0" />
+        <button id="start-timer">Start</button>
+        <div>
+          <button id="0" onclick="startDefaultTimer('00:10')">00:10</button>
+          <button id="1" onclick="startDefaultTimer('01:00')">01:00</button>
+          <button id="5" onclick="startDefaultTimer('05:00')">05:00</button>
+          <button id="15" onclick="startDefaultTimer('15:00')">15:00</button>
+          <button id="25" onclick="startDefaultTimer('25:00')">25:00</button>
         </div>
       </div>
-      <div class="m-b-1">
-        <h1 class="large weight-500 m-b-1">This is a todo-list</h1>
-        <input
-          class="bg-whitesmoke p-05 m-05 text-medium border-none outline-none rounded-md m-b-1"
-          type="text"
-          placeholder="write a task"
-          id="task"
-        />
-        <button
-          class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-          id="add-todo"
-        >
-          Add
-        </button>
+      <div>
+        <h2>This is a todo-list</h2>
+        <input type="text" placeholder="write a task" id="task" />
+        <button id="add-todo">Add</button>
         <div id="todos"></div>
       </div>
-      <div class="m-b-1">
-        <h1 class="large weight-500 m-b-1">This is my routine</h1>
-        <div class="flex justify-center items-center h-100 flex-column">
-          <button
-            class="pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05"
-            id="excercise"
-            onclick="startWorkout()"
-          >
-            Start Workout
-          </button>
-          <span class="mono small" id="workout-timer"></span>
+      <div>
+        <h2>This is my routine</h2>
+        <div>
+          <button id="excercise" onclick="startWorkout()">Start Workout</button>
+          <span id="workout-timer"></span>
         </div>
       </div>
-      <div class="m-b-1">
-        <h1 class="large weight-500 m-b-1">This are my favorite quotes</h1>
-        <div class="flex justify-center items-center h-100 flex-column">
-          <span class="gray zeyada larger">"Veni, vidi, vici"</span>
-        </div>
+      <div>
+        <h2>This are my favorite quotes</h2>
+        <span>"Veni, vidi, vici"</span>
       </div>
     </div>
+    <footer>
+      <br />
+      <br />
+      <br />
+      <div>
+        <a href="https://github.com/devoluty/javscript">Github Project</a>
+        <a href="https://twitter.com/devolutyy">Twitter</a>
+      </div>
+      <p>CSS generated: <a href="https://latex.vercel.app/">Latex.css</a></p>
+    </footer>
   </body>
   <script src="app.js"></script>
 </html>

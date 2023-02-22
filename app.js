@@ -53,8 +53,6 @@ function makeChessTable() {
 
   var chessProject = document.getElementById("chess-project");
   var btn = document.createElement("button");
-  btn.classList =
-    "pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05 m-t-1";
   btn.textContent = "Remove table";
   btn.addEventListener("click", () => {
     newSpace.remove();
@@ -122,11 +120,8 @@ function addTodo() {
   var todoTitle = document.getElementById("task");
   var todos = document.getElementById("todos");
   var todoContainer = document.createElement("div"); // wrap todo and button in a container
-  todoContainer.classList = "flex space-between";
   var todo = document.createElement("p");
   var button = document.createElement("button");
-  button.classList =
-    "pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05";
 
   button.textContent = "Done";
   button.setAttribute("aria-label", "Remove todo item"); // add aria-label for accessibility
@@ -204,6 +199,8 @@ function startWorkout() {
       counter++;
     }, 1000);
   }
+
+  btn.textContent = `${excercises[currentExcercise].name} x ${excercises[currentExcercise].reps}`;
   if (clicks % 2 == 0) {
     currentExcercise++;
     clicks = 0;
@@ -220,5 +217,4 @@ function startWorkout() {
   }
 
   clicks++;
-  btn.textContent = excercises[currentExcercise].name;
 }
