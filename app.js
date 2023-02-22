@@ -191,7 +191,9 @@ function resetWorkout() {
 }
 
 function startWorkout() {
+  clicks++;
   if (!start) {
+    clicks = 0;
     start = true;
     counter = 0;
     timerbtn.textContent = "";
@@ -199,9 +201,9 @@ function startWorkout() {
       counter++;
     }, 1000);
   }
-
-  btn.textContent = `${excercises[currentExcercise].name} x ${excercises[currentExcercise].reps}`;
-  if (clicks % 2 == 0) {
+  console.log(clicks);
+  if (clicks % 2 == 0 && clicks !== 0) {
+    console.log("next excercise");
     currentExcercise++;
     clicks = 0;
   }
@@ -215,6 +217,5 @@ function startWorkout() {
     setTimeout(resetWorkout, 3000);
     return;
   }
-
-  clicks++;
+  btn.textContent = `${excercises[currentExcercise].name} x ${excercises[currentExcercise].reps}`;
 }
