@@ -46,13 +46,15 @@ function makeChessTable() {
       let isEvenRow = i % 2 == 0;
       let isEvenColumn = j % 2 == 0;
       let isBlack = isEvenRow ? !isEvenColumn : isEvenColumn;
-      div.className = isBlack ? "black" : "white";
+      div.className = isBlack ? "black-square" : "white-square";
       newSpace.appendChild(div);
     }
   }
 
   var chessProject = document.getElementById("chess-project");
   var btn = document.createElement("button");
+  btn.classList =
+    "pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05 m-t-1";
   btn.textContent = "Remove table";
   btn.addEventListener("click", () => {
     newSpace.remove();
@@ -120,9 +122,11 @@ function addTodo() {
   var todoTitle = document.getElementById("task");
   var todos = document.getElementById("todos");
   var todoContainer = document.createElement("div"); // wrap todo and button in a container
-  todoContainer.className = "todo-container";
+  todoContainer.classList = "flex space-between";
   var todo = document.createElement("p");
   var button = document.createElement("button");
+  button.classList =
+    "pt-mono p-05 border-none pointer bg-carbon white rounded-md m-05";
 
   button.textContent = "Done";
   button.setAttribute("aria-label", "Remove todo item"); // add aria-label for accessibility
@@ -140,3 +144,81 @@ function addTodo() {
 }
 
 document.getElementById("add-todo").addEventListener("click", addTodo);
+
+// Minimal Workout
+
+const excercises = [
+  {
+    name: "planks",
+    reps: 15,
+  },
+  {
+    name: "frogs",
+    reps: 20,
+  },
+  {
+    name: "cocodriles",
+    reps: 20,
+  },
+  {
+    name: "diamonds",
+    reps: 20,
+  },
+  {
+    name: "diver",
+    reps: 20,
+  },
+  {
+    name: "push ups with jumps",
+    reps: 20,
+  },
+  {
+    name: "kickies",
+    reps: 20,
+  },
+];
+let currentExcercise = 0;
+let counterSet = 0;
+let setComplete = false;
+let numberSets = 3;
+let numberTimes = 2;
+let start = false;
+let counter = 0;
+
+let clicks = 0;
+
+const btn = document.getElementById("excercise");
+const timerbtn = document.getElementById("workout-timer");
+
+function resetWorkout() {
+  start = false;
+  btn.textContent = "Start Workout";
+}
+
+function startWorkout() {
+  if (!start) {
+    start = true;
+    counter = 0;
+    timerbtn.textContent = "";
+    setInterval(() => {
+      counter++;
+    }, 1000);
+  }
+  if (clicks % 2 == 0) {
+    currentExcercise++;
+    clicks = 0;
+  }
+  if (currentExcercise >= excercises.length) {
+    clicks = 0;
+    currentExcercise = 0;
+    btn.textContent = "finished";
+    timerbtn.textContent = `${parseInt(counter / 60)
+      .toString()
+      .padStart(2, "0")}:${(counter % 60).toString().padStart(2, "0")}`;
+    setTimeout(resetWorkout, 3000);
+    return;
+  }
+
+  clicks++;
+  btn.textContent = excercises[currentExcercise].name;
+}

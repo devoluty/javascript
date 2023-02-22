@@ -12,6 +12,7 @@ Thanks for visiting! yielding-engine.surge.sh
 ## Next features
 
 - [x] Responsive design
+- [ ] Dark/Light Mode
 - [ ] Better UI
 
 Counter:
